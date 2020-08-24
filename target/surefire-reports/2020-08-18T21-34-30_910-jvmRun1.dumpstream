@@ -1,0 +1,423 @@
+# Created at 2020-08-18T21:35:15.415
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2020-08-18T21:35:31.256
+Unexpected IOException: 8,1,smarte.webautomation.CreateCustomFields,initializemanager(smarte.webautomation.CreateCustomFields),null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.08 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir16472_7251}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 399cc9ef55ad07191a71a3765fe4b53c,null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.08 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir16472_7251}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 399cc9ef55ad07191a71a3765fe4b53c,CreateCustomFields>BaseTest.initializemanager:23 \00BB WebDriver chrome not reacha...,org.openqa.selenium.WebDriverException: \000Achrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.08 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir16472_7251}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 399cc9ef55ad07191a71a3765fe4b53c\000A
+
+
+# Created at 2020-08-18T21:35:31.260
+Unexpected IOException: 9,1,smarte.webautomation.CreateCustomFields,createCustomFieldsForContact(smarte.webautomation.CreateCustomFields),null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.08 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir16472_7251}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 399cc9ef55ad07191a71a3765fe4b53c,null
+
+
+# Created at 2020-08-18T21:35:31.345
+Unexpected IOException with stream: S
+
+# Created at 2020-08-18T21:35:31.345
+Unexpected IOException with stream: t
+
+# Created at 2020-08-18T21:35:31.345
+Unexpected IOException with stream: a
+
+# Created at 2020-08-18T21:35:31.349
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.349
+Unexpected IOException with stream: t
+
+# Created at 2020-08-18T21:35:31.349
+Unexpected IOException with stream: i
+
+# Created at 2020-08-18T21:35:31.349
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.349
+Unexpected IOException with stream: g
+
+# Created at 2020-08-18T21:35:31.353
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.353
+Unexpected IOException with stream: C
+
+# Created at 2020-08-18T21:35:31.353
+Unexpected IOException with stream: h
+
+# Created at 2020-08-18T21:35:31.353
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.353
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.357
+Unexpected IOException with stream: m
+
+# Created at 2020-08-18T21:35:31.357
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.357
+Unexpected IOException with stream: D
+
+# Created at 2020-08-18T21:35:31.357
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.357
+Unexpected IOException with stream: i
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream: v
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.361
+Unexpected IOException with stream: .
+
+# Created at 2020-08-18T21:35:31.365
+Unexpected IOException with stream: 3
+
+# Created at 2020-08-18T21:35:31.365
+Unexpected IOException with stream: 8
+
+# Created at 2020-08-18T21:35:31.365
+Unexpected IOException with stream: .
+
+# Created at 2020-08-18T21:35:31.365
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.369
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.369
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.369
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.369
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.369
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.373
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.373
+Unexpected IOException with stream: (
+
+# Created at 2020-08-18T21:35:31.373
+Unexpected IOException with stream: 4
+
+# Created at 2020-08-18T21:35:31.373
+Unexpected IOException with stream: 3
+
+# Created at 2020-08-18T21:35:31.373
+Unexpected IOException with stream: 7
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: 6
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: f
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: b
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: f
+
+# Created at 2020-08-18T21:35:31.377
+Unexpected IOException with stream: a
+
+# Created at 2020-08-18T21:35:31.381
+Unexpected IOException with stream: 8
+
+# Created at 2020-08-18T21:35:31.381
+Unexpected IOException with stream: 7
+
+# Created at 2020-08-18T21:35:31.385
+Unexpected IOException with stream: 6
+
+# Created at 2020-08-18T21:35:31.385
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.385
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.385
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.385
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: 7
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.389
+Unexpected IOException with stream: b
+
+# Created at 2020-08-18T21:35:31.393
+Unexpected IOException with stream: 3
+
+# Created at 2020-08-18T21:35:31.393
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.393
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.393
+Unexpected IOException with stream: b
+
+# Created at 2020-08-18T21:35:31.397
+Unexpected IOException with stream: 8
+
+# Created at 2020-08-18T21:35:31.397
+Unexpected IOException with stream: 6
+
+# Created at 2020-08-18T21:35:31.397
+Unexpected IOException with stream: 7
+
+# Created at 2020-08-18T21:35:31.397
+Unexpected IOException with stream: 6
+
+# Created at 2020-08-18T21:35:31.397
+Unexpected IOException with stream: 3
+
+# Created at 2020-08-18T21:35:31.401
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.401
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.401
+Unexpected IOException with stream: 9
+
+# Created at 2020-08-18T21:35:31.401
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.401
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.405
+Unexpected IOException with stream: b
+
+# Created at 2020-08-18T21:35:31.405
+Unexpected IOException with stream: )
+
+# Created at 2020-08-18T21:35:31.405
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.405
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.405
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.409
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.409
+Unexpected IOException with stream: p
+
+# Created at 2020-08-18T21:35:31.409
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.409
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.409
+Unexpected IOException with stream: t
+
+# Created at 2020-08-18T21:35:31.413
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.413
+Unexpected IOException with stream: 2
+
+# Created at 2020-08-18T21:35:31.413
+Unexpected IOException with stream: 0
+
+# Created at 2020-08-18T21:35:31.413
+Unexpected IOException with stream: 5
+
+# Created at 2020-08-18T21:35:31.417
+Unexpected IOException with stream: 9
+
+# Created at 2020-08-18T21:35:31.417
+Unexpected IOException with stream: 6
+
+# Created at 2020-08-18T21:35:31.417
+Unexpected IOException with stream: 
+
+# Created at 2020-08-18T21:35:31.417
+Unexpected IOException with stream: 
+
+
+# Created at 2020-08-18T21:35:31.417
+Unexpected IOException with stream: O
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream: l
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream: y
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream: l
+
+# Created at 2020-08-18T21:35:31.421
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.425
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.425
+Unexpected IOException with stream: a
+
+# Created at 2020-08-18T21:35:31.425
+Unexpected IOException with stream: l
+
+# Created at 2020-08-18T21:35:31.425
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.425
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.429
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.429
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.429
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: c
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: t
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: i
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.430
+Unexpected IOException with stream: n
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream: s
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream: a
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream: r
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream:  
+
+# Created at 2020-08-18T21:35:31.434
+Unexpected IOException with stream: a
+
+# Created at 2020-08-18T21:35:31.438
+Unexpected IOException with stream: l
+
+# Created at 2020-08-18T21:35:31.438
+Unexpected IOException with stream: l
+
+# Created at 2020-08-18T21:35:31.438
+Unexpected IOException with stream: o
+
+# Created at 2020-08-18T21:35:31.438
+Unexpected IOException with stream: w
+
+# Created at 2020-08-18T21:35:31.442
+Unexpected IOException with stream: e
+
+# Created at 2020-08-18T21:35:31.442
+Unexpected IOException with stream: d
+
+# Created at 2020-08-18T21:35:31.442
+Unexpected IOException with stream: .
+
+# Created at 2020-08-18T21:35:31.442
+Unexpected IOException with stream: 
+
+# Created at 2020-08-18T21:35:31.442
+Unexpected IOException with stream: 
+
+
+# Created at 2020-08-18T21:35:34.692
+Unexpected IOException with stream: Aug 18, 2020 9:35:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+
+
+# Created at 2020-08-18T21:35:52.756
+Unexpected IOException: 8,1,smarte.webautomation.CreateCustomFields,initializemanager(smarte.webautomation.CreateCustomFields),null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.05 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir33448_11682}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: ec5ac2f8aaaa7a28c3c5ccd9c173ea4b,null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.05 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir33448_11682}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: ec5ac2f8aaaa7a28c3c5ccd9c173ea4b,CreateCustomFields>BaseTest.initializemanager:23 \00BB WebDriver chrome not reacha...,org.openqa.selenium.WebDriverException: \000Achrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.05 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir33448_11682}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: ec5ac2f8aaaa7a28c3c5ccd9c173ea4b\000A
+
+
+# Created at 2020-08-18T21:35:52.760
+Unexpected IOException: 9,1,smarte.webautomation.CreateCustomFields,createCustomFieldsForLead(smarte.webautomation.CreateCustomFields),null,chrome not reachable\000A  (Session info: chrome=84.0.4147.125)\000A  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002Cplatform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)\000ACommand duration or timeout: 8.08 seconds\000ABuild info: version: '3.1.0'\002C revision: 'b94c902'\002C time: '2017-02-16 12:21:31 -0800'\000ASystem info: host: 'SMT-LAP-053'\002C ip: '192.168.5.106'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '1.8.0_231'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACapabilities [{applicationCacheEnabled=false\002C rotatable=false\002C mobileEmulationEnabled=false\002C networkConnectionEnabled=false\002C chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb)\002C userDataDir=C:\005CUsers\005CPOONAM~1\005CAppData\005CLocal\005CTemp\005Cscoped_dir16472_7251}\002C takesHeapSnapshot=true\002C pageLoadStrategy=normal\002C databaseEnabled=false\002C handlesAlerts=true\002C hasTouchScreen=false\002C version=84.0.4147.125\002C platform=XP\002C browserConnectionEnabled=false\002C nativeEvents=true\002C acceptSslCerts=false\002C acceptInsecureCerts=false\002C locationContextEnabled=true\002C webStorageEnabled=true\002C browserName=chrome\002C takesScreenshot=true\002C javascriptEnabled=true\002C cssSelectorsEnabled=true\002C setWindowRect=true\002C unexpectedAlertBehaviour=}]\000ASession ID: 399cc9ef55ad07191a71a3765fe4b53c,null
+
+
+# Created at 2020-08-18T21:35:54.216
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+
