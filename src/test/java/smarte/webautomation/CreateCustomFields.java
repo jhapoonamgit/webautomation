@@ -5,21 +5,19 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-
 import org.openqa.selenium.WebDriver;
-
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import smarte.pagefactory.web.SalesforceCustomFields;
 import smarte.utility.ExcelUtility;
+import static smarte.webautomation.WebpageFactory.*;
 
 public class CreateCustomFields extends BaseTest {
-	
+
 	Properties prop = new Properties();
+
 	@BeforeTest
 	public void loadDriver() {
 		WebDriver driver;
@@ -39,10 +37,10 @@ public class CreateCustomFields extends BaseTest {
 	@AfterTest
 	public void close() {
 		driver.quit();
-	}	
+	}
 
 	@Test
-	public void createCustomFieldsForLead() {	
+	public void createCustomFieldsForLead() {
 		String dataType, label, name, description;
 
 		XSSFSheet sheet = null;
@@ -51,7 +49,8 @@ public class CreateCustomFields extends BaseTest {
 		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath();
 		sheet = ExcelUtility.openSpreadSheet(file, "Lead");
 		int lastRow = sheet.getLastRowNum();
-		new SalesforceCustomFields(driver).login(prop.getProperty("username"), prop.getProperty("password"));
+
+		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
 
 		try {
 			Thread.sleep(1000);
@@ -60,27 +59,24 @@ public class CreateCustomFields extends BaseTest {
 			e.printStackTrace();
 		}
 
-		for (int row = 1; row <= lastRow; row++) {			
-			try
-			{
-			new SalesforceCustomFields(driver).clickOnSetupLink();
-			new SalesforceCustomFields(driver).clickOnCustomize();
-			Thread.sleep(1000);	
-			new SalesforceCustomFields(driver).clickOnLead();
-			new SalesforceCustomFields(driver).clickOnAddCustomFieldstoLeads();
-			Thread.sleep(1000);
-			new SalesforceCustomFields(driver).clickOnNew();
-		//	Thread.sleep(1000);			
-			dataType = 	ExcelUtility.getCellData(sheet, row, "DataType");
-			new SalesforceCustomFields(driver).clickOnDataType(dataType);			
-			new SalesforceCustomFields(driver).clickOnNext();			
-			
-			label = ExcelUtility.getCellData(sheet, row, "Label");
-			name = ExcelUtility.getCellData(sheet, row, "Name");
-			description = ExcelUtility.getCellData(sheet, row, "Description");
-			new SalesforceCustomFields(driver).createCustomFieldForLead(label, name, description);
-			}
-			catch(Exception ex) {
+		for (int row = 1; row <= lastRow; row++) {
+			try {
+				salesforceCustom.clickOnSetupLink();
+				// salesforceCustom.clickOnSetupLink();
+				salesforceCustom.clickOnCustomize();
+				salesforceCustom.clickOnLead();
+				salesforceCustom.clickOnAddCustomFieldstoLeads();
+
+				salesforceCustom.clickOnNew();
+				dataType = ExcelUtility.getCellData(sheet, row, "DataType");
+				salesforceCustom.clickOnDataType(dataType);
+				salesforceCustom.clickOnNext();
+
+				label = ExcelUtility.getCellData(sheet, row, "Label");
+				name = ExcelUtility.getCellData(sheet, row, "Name");
+				description = ExcelUtility.getCellData(sheet, row, "Description");
+				salesforceCustom.createCustomFieldForLead(label, name, description);
+			} catch (Exception ex) {
 				continue;
 			}
 		}
@@ -88,7 +84,7 @@ public class CreateCustomFields extends BaseTest {
 
 	@Test
 	public void createCustomFieldsForAccount() throws InterruptedException {
-		String dataType,label, name, description;
+		String dataType, label, name, description;
 
 		XSSFSheet sheet = null;
 		List<String> lstStatus = new ArrayList<String>();
@@ -96,26 +92,24 @@ public class CreateCustomFields extends BaseTest {
 		String file = CreateCustomFields.class.getResource("/TestData/Account.xlsx").getPath();
 
 		sheet = ExcelUtility.openSpreadSheet(file, "Sheet1");
-		int lastRow = sheet.getLastRowNum();	
-		new SalesforceCustomFields(driver).login(prop.getProperty("username"), prop.getProperty("password"));
-		
+		int lastRow = sheet.getLastRowNum();
+		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
+
 		for (int row = 1; row <= lastRow; row++) {
-			
-		//	new SalesforceCustomFields(driver).clickOnSetupLink();
-			new SalesforceCustomFields(driver).clickOnCustomize();
 
-			new SalesforceCustomFields(driver).clickOnAccount();
-			new SalesforceCustomFields(driver).clickOnAddCustomFieldstoAccounts();
-			new SalesforceCustomFields(driver).clickOnNewAccount();
+			salesforceCustom.clickOnSetupLink();
+			salesforceCustom.clickOnAccount();
+			salesforceCustom.clickOnAddCustomFieldstoAccounts();
+			salesforceCustom.clickOnNewAccount();
 
-			dataType = 	ExcelUtility.getCellData(sheet, row, "DataType");
-			new SalesforceCustomFields(driver).clickOnDataType(dataType);			
-			new SalesforceCustomFields(driver).clickOnNext();				
-			
+			dataType = ExcelUtility.getCellData(sheet, row, "DataType");
+			salesforceCustom.clickOnDataType(dataType);
+			salesforceCustom.clickOnNext();
+
 			label = ExcelUtility.getCellData(sheet, row, "Label");
 			name = ExcelUtility.getCellData(sheet, row, "Name");
 			description = ExcelUtility.getCellData(sheet, row, "Description");
-			new SalesforceCustomFields(driver).createCustomFieldForLead(label, name, description);
+			salesforceCustom.createCustomFieldForLead(label, name, description);
 		}
 	}
 
@@ -128,29 +122,29 @@ public class CreateCustomFields extends BaseTest {
 
 		String file = CreateCustomFields.class.getResource("/TestData/Contact.xlsx").getPath();
 
-		sheet = ExcelUtility.openSpreadSheet(file, "Sheet1");		
+		sheet = ExcelUtility.openSpreadSheet(file, "Sheet1");
 
-		new SalesforceCustomFields(driver).login(prop.getProperty("username"), prop.getProperty("password"));
+		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
 		int lastRow = sheet.getLastRowNum();
 
 		for (int row = 1; row <= lastRow; row++) {
 
-			//new SalesforceCustomFields(driver).clickOnSetupLink();
-			new SalesforceCustomFields(driver).clickOnCustomize();
+			salesforceCustom.clickOnSetupLink();
+			//salesforceCustom.clickOnCustomize();
 
-			new SalesforceCustomFields(driver).clickOnContact();
-			new SalesforceCustomFields(driver).clickOnAddCustomFieldstoContact();
-			new SalesforceCustomFields(driver).clickOnNewAccount();
+			salesforceCustom.clickOnContact();
+			salesforceCustom.clickOnAddCustomFieldstoContact();
+			salesforceCustom.clickOnNewAccount();
 
-			dataType = 	ExcelUtility.getCellData(sheet, row, "DataType");
-			new SalesforceCustomFields(driver).clickOnDataType(dataType);
-			
-			new SalesforceCustomFields(driver).clickOnNext();
-			
+			dataType = ExcelUtility.getCellData(sheet, row, "DataType");
+			salesforceCustom.clickOnDataType(dataType);
+
+			salesforceCustom.clickOnNext();
+
 			label = ExcelUtility.getCellData(sheet, row, "Label");
 			name = ExcelUtility.getCellData(sheet, row, "Name");
 			description = ExcelUtility.getCellData(sheet, row, "Description");
-			new SalesforceCustomFields(driver).createCustomFieldForLead(label, name, description);					
+			salesforceCustom.createCustomFieldForLead(label, name, description);
 		}
 
 	}

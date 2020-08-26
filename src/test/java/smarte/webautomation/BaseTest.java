@@ -24,6 +24,7 @@ public class BaseTest {
 		setDriver("chrome");
 		driver.get(getApplicationUrl("salesforce"));		
 		driver.manage().window().maximize();
+		WebpageFactory.initializePageObjects(driver);
 	}	
 	
 	public WebDriver getDriver() {

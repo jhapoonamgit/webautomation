@@ -4,22 +4,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SalesforceCustomFields {
 	public WebDriver driver;
 	
+	@FindBy(xpath= "//input[@id='username']")
+	public  WebElement emailTextBox;
+	
+	
 	public SalesforceCustomFields(WebDriver driver) {
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 150), getClass());
 		this.driver = driver;
 	}
 
-	public void clickLogin() {
-		// WebElement login =
-		// driver.findElement(By.xpath("//div/div/a[@href='https://login.salesforce.com/?locale=in']"));
-		// login.click();
-	}
-
+	
 	public void login(String userId, String pwd) {
 		// driver.get("https://login.salesforce.com/?locale=in");
 		WebElement emailTextBox = driver.findElement(By.xpath("//input[@id='username']"));
@@ -36,9 +39,21 @@ public class SalesforceCustomFields {
 		submit.click();
 	}
 
+	int count;
 	public void clickOnSetupLink() {
-		WebElement setup = driver.findElement(By.xpath("//div/a[@id='setupLink']"));
-		setup.click();
+		count = driver.findElements(By.xpath("//div/a[@id='setupLink']")).size();
+		if (count > 0) {
+			WebElement setup = driver.findElement(By.xpath("//div/a[@id='setupLink']"));
+			setup.click();
+		} else
+			ClickOnMenu();
+	}
+
+	public void ClickOnMenu() {
+		WebElement menuLink = driver.findElement(By.xpath("//div[@Class='menuButtonButton']"));
+		WebElement setupLink = driver.findElement(By.xpath("//div/a[@title='Setup']"));
+		menuLink.click();
+		setupLink.click();
 	}
 
 	public void clickOnCustomize() {
@@ -99,7 +114,7 @@ public class SalesforceCustomFields {
 	public void clickOnDataType(String dataType) {
 		WebElement textAreaLong = driver.findElement(By.xpath("//table/tbody/tr/td/label[@for='dtypeX']"));
 		WebElement textArea = driver.findElement(By.xpath("//table/tbody/tr/td/label[@for='dtypeX']"));
-		
+
 		switch (dataType) {
 		case "textAreaLong":
 			textAreaLong.click();
@@ -117,16 +132,18 @@ public class SalesforceCustomFields {
 
 	public void clickOnSave() {
 		WebElement save = null;
-		
-		  if(driver.findElements(By.xpath("//input[@name='save']")).size() !=0) {
-			  save = driver.findElement(By.xpath("//input[@name='save']")); save.click(); } 
-	
+
+		if (driver.findElements(By.xpath("//input[@name='save']")).size() != 0) {
+			save = driver.findElement(By.xpath("//input[@name='save']"));
+			save.click();
+		}
+
 	}
 
 	public void clickOnGoNext() {
 		WebElement gotoNext = driver.findElement(By.xpath("//input[@name='goNext']"));
-		
-		if(gotoNext.isDisplayed())
+
+		if (gotoNext.isDisplayed())
 			gotoNext.click();
 	}
 

@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="smarte.webautomation.CreateCustomFields">
+      <class name="smarte.webautomation.CreateCustomFieldsEnterpriseTest">
         <methods>
-          <include name="createCustomFieldsForLead"/>
-          <include name="close"/>
-          <include name="initializemanager"/>
+          <include name="createCustomFieldsForEnterpriseLead"/>
           <include name="loadDriver"/>
+          <include name="initializemanager"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- smarte.webautomation.CreateCustomFields -->
+      </class> <!-- smarte.webautomation.CreateCustomFieldsEnterpriseTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
