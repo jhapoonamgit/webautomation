@@ -83,7 +83,7 @@ public class CreateCustomFields extends BaseTest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void createCustomFieldsForAccount() throws InterruptedException {
 		String dataType, label, name, description;
 
@@ -114,7 +114,7 @@ public class CreateCustomFields extends BaseTest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void createCustomFieldsForContact() throws InterruptedException {
 		String dataType, label, name, description;
 
