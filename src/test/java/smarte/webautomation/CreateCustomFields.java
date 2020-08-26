@@ -47,6 +47,7 @@ public class CreateCustomFields extends BaseTest {
 		List<String> lstStatus = new ArrayList<String>();
 
 		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath();
+		System.out.println("File" + file);
 		sheet = ExcelUtility.openSpreadSheet(file, "Lead");
 		int lastRow = sheet.getLastRowNum();
 
