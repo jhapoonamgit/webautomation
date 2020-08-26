@@ -45,14 +45,15 @@ public class CreateCustomFields extends BaseTest {
 
 		XSSFSheet sheet = null;
 		List<String> lstStatus = new ArrayList<String>();
+		
+		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
+
 
 		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath();
 		System.out.println("File" + file);
+		
 		sheet = ExcelUtility.openSpreadSheet(file, "Lead");
 		int lastRow = sheet.getLastRowNum();
-
-		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
-
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -89,12 +90,12 @@ public class CreateCustomFields extends BaseTest {
 
 		XSSFSheet sheet = null;
 		List<String> lstStatus = new ArrayList<String>();
-
+		
+		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
 		String file = CreateCustomFields.class.getResource("/TestData/Account.xlsx").getPath();
 
 		sheet = ExcelUtility.openSpreadSheet(file, "Sheet1");
 		int lastRow = sheet.getLastRowNum();
-		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
 
 		for (int row = 1; row <= lastRow; row++) {
 
