@@ -49,7 +49,7 @@ public class CreateCustomFields extends BaseTest {
 		List<String> lstStatus = new ArrayList<String>();
 		
 		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
-		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath().replace("%", " ");
+		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath().replace("%", " ").replace("20","");
 		System.out.println("File" + file);
 		
 		sheet = ExcelUtility.openSpreadSheet(file, "Lead");
