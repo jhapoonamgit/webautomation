@@ -7,9 +7,11 @@ import java.util.List;
 import java.util.Properties;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
 import smarte.pagefactory.web.SalesforceCustomFields;
 import smarte.utility.ExcelUtility;
 import static smarte.webautomation.WebpageFactory.*;
@@ -47,9 +49,7 @@ public class CreateCustomFields extends BaseTest {
 		List<String> lstStatus = new ArrayList<String>();
 		
 		salesforceCustom.login(prop.getProperty("username"), prop.getProperty("password"));
-
-
-		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath();
+		String file = CreateCustomFields.class.getResource("/testdata/Lead.xlsx").getPath().replace("%", " ");
 		System.out.println("File" + file);
 		
 		sheet = ExcelUtility.openSpreadSheet(file, "Lead");
@@ -60,11 +60,10 @@ public class CreateCustomFields extends BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		Assert.assertTrue(false);
 		for (int row = 1; row <= lastRow; row++) {
 			try {
 				salesforceCustom.clickOnSetupLink();
-				// salesforceCustom.clickOnSetupLink();
 				salesforceCustom.clickOnCustomize();
 				salesforceCustom.clickOnLead();
 				salesforceCustom.clickOnAddCustomFieldstoLeads();

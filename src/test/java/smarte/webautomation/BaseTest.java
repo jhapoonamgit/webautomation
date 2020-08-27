@@ -1,4 +1,5 @@
 package smarte.webautomation;
+
 import java.io.File;
 import java.io.InputStream;
 
@@ -8,25 +9,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 
-public class BaseTest {
+@Listeners({ BaseTest.class, smarte.report.TestNGListener.class })
+public class BaseTest implements ISuiteListener {
 	public static WebDriver driver;
 	private DesiredCapabilities desiredCapabilities;
-	
+
 	private static String currentDriver = "";
 	private static String driverFile = "";
-	
+
 	@BeforeTest()
-	public void initializemanager()
-	{
+	public void initializemanager() {
 		setDriver("chrome");
-		driver.get(getApplicationUrl("salesforce"));		
+		driver.get(getApplicationUrl("salesforce"));
 		driver.manage().window().maximize();
 		WebpageFactory.initializePageObjects(driver);
-	}	
-	
+	}
+
 	public WebDriver getDriver() {
 		if (driver instanceof ChromeDriver) {
 			return (ChromeDriver) driver;
@@ -34,31 +38,26 @@ public class BaseTest {
 			return (InternetExplorerDriver) driver;
 		} else if (driver instanceof FirefoxDriver) {
 			return (FirefoxDriver) driver;
-		} 
-			return driver;
+		}
+		return driver;
 	}
-	
 
-	
-	public String getApplicationUrl(String app)
-	{
-		switch(app.toLowerCase())
-		{
+	public String getApplicationUrl(String app) {
+		switch (app.toLowerCase()) {
 		case "salesforce":
 			return "http://login.salesforce.com";
-		
+
 		default:
-				return "http://login.salesforce.com";
+			return "http://login.salesforce.com";
 		}
 	}
-	
+
 	private final static String getChromeDriverLocation() {
 		String osName = System.getProperty("os.name").toLowerCase();
 		String driverResource = "";
 		if (osName.startsWith("windows")) {
 			driverResource = "src\\test\\resources\\driver\\chromedriver.exe";
-		} 
-		else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
+		} else if (osName.contains("nix") || osName.contains("nux") || osName.contains("aix")) {
 			driverResource = "chromedriver";
 		}
 //		InputStream driverStream = WebConfigHandler.class.getResourceAsStream(driverResource);
@@ -66,7 +65,7 @@ public class BaseTest {
 		return driverResource;
 		// return "";
 	}
-	
+
 	protected void setDesiredCapabilites(String driverType) {
 		switch (driverType.toLowerCase()) {
 		case "chrome":
@@ -78,8 +77,7 @@ public class BaseTest {
 		case "firefox":
 			this.desiredCapabilities = DesiredCapabilities.firefox();
 			break;
-		
-			
+
 		/*
 		 * case "cloud": DesiredCapabilities cloudDesiredCapabilities = new
 		 * DesiredCapabilities();
@@ -92,12 +90,12 @@ public class BaseTest {
 			break;
 		}
 	}
-	
+
 	public void setDriver(String driverType) {
 		setDesiredCapabilites(driverType);
-		//addDownloadCapability(driverType,getDesiredCapabilities());
+		// addDownloadCapability(driverType,getDesiredCapabilities());
 		switch (driverType.toLowerCase()) {
-		//case "chrome":
+		// case "chrome":
 		case "chrome":
 			String chromeDriverPath = "";
 			try {
@@ -107,7 +105,7 @@ public class BaseTest {
 			}
 			System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 			driver = new ChromeDriver(getDesiredCapabilities());
-			//driver = new ChromeDriver();
+			// driver = new ChromeDriver();
 			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e1) {
@@ -119,7 +117,7 @@ public class BaseTest {
 		case "firefox":
 			String firefoxDriverPath = "";
 			try {
-				//firefoxDriverPath = getFirefoxDriverLocation();
+				// firefoxDriverPath = getFirefoxDriverLocation();
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -130,27 +128,24 @@ public class BaseTest {
 		case "ie":
 			String ieDriverPath = "";
 			try {
-				//ieDriverPath = getIEDriverLocation();
+				// ieDriverPath = getIEDriverLocation();
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
 			System.setProperty("webdriver.ie.driver", ieDriverPath);
 			driver = new InternetExplorerDriver(getDesiredCapabilities());
 			break;
-	
+
 		/*
 		 * case "cloud": try{ driver = new RemoteWebDriver(new
 		 * URL("http://"+"rashmiagrawal1"+":"+"rGs6EgvHXQF72svfYqyb"+"@"+
-		 * "hub-cloud.browserstack.com"+"/wd/hub"), getDesiredCapabilities()); }
-		 * catch (Exception e) { System.out.println(e.getMessage()); } break;
+		 * "hub-cloud.browserstack.com"+"/wd/hub"), getDesiredCapabilities()); } catch
+		 * (Exception e) { System.out.println(e.getMessage()); } break;
 		 */
-			
+
 //		case "headlesschrome":
 //			driver = SeleniumUtility.getHeadlessDriver();
-//			break;
-//	
-			
-			
+//			break;			
 		default:
 			String defaultDriverPath = "";
 			try {
@@ -163,11 +158,21 @@ public class BaseTest {
 			break;
 		}
 	}
-	
+
 	public DesiredCapabilities getDesiredCapabilities() {
 		return this.desiredCapabilities;
 	}
-	
 
+	@Override
+	public void onStart(ISuite suite) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onFinish(ISuite suite) {
+		// TODO Auto-generated method stub
+
+	}
 
 }
