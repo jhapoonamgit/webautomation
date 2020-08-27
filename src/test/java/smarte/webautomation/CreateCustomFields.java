@@ -60,7 +60,6 @@ public class CreateCustomFields extends BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Assert.assertTrue(false);
 		for (int row = 1; row <= lastRow; row++) {
 			try {
 				salesforceCustom.clickOnSetupLink();

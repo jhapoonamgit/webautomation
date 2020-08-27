@@ -280,7 +280,7 @@
 				<configuration>
 					<skipTests>false</skipTests>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 
 				</configuration>
